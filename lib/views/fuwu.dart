@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_app/components/fuwu_card.dart';
 import 'package:flutter_first_app/components/fuwu_card_provider.dart';
+import 'package:flutter_first_app/components/myFuwuCard.dart';
 
 class FuWu extends StatefulWidget {
   const FuWu({Key key}) : super(key: key);
@@ -50,17 +51,17 @@ class _FuWu extends State<FuWu> with SingleTickerProviderStateMixin {
   }
 
   Widget AllFuwu() {
-    return new ListView(
+    return ListView(
       children: <Widget>[
-        new FuwuCardProvider(),
-        new FuwuCardProvider(),
-        new FuwuCard(),
-        new FuwuCard(),
-        new FuwuCard(),
+        FuwuCardProvider(),
+        FuwuCardProvider(),
+        FuwuCard(),
+        FuwuCard(),
+        FuwuCard(),
         Center(
           child: Text('没有了'),
         ),
-        new SizedBox(
+        SizedBox(
           height: 80.0,
         ),
       ],
@@ -68,14 +69,14 @@ class _FuWu extends State<FuWu> with SingleTickerProviderStateMixin {
   }
 
   Widget MyFuwu() {
-    return new ListView(
+    return ListView(
       children: <Widget>[
-        new FuwuCard(),
-        new FuwuCard(),
+        MyFuwuCard(),
+        MyFuwuCard(),
         Center(
           child: Text('没有了'),
         ),
-        new SizedBox(
+        SizedBox(
           height: 80.0,
         ),
       ],

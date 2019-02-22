@@ -3,13 +3,7 @@ import 'package:flutter/material.dart';
 class RoutePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-//      initialRoute: '/',
-//      routes: {
-//        '/': (context) => FirstScreen(),
-//        '/second': (context) => SecondScreen(),
-//      },
-        );
+    return FirstScreen();
   }
 }
 

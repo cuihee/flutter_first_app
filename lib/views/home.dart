@@ -50,7 +50,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
         ],
       ),
 
-      drawer: new MyDrawer(),
+      drawer: MyDrawer(),
       //左抽屉
       //drawer: new UserAccountsDrawerHeader(accountName: Text("testName"), accountEmail: Text("testName")),
 
@@ -164,10 +164,10 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      showToast('登出');
-                      //todo 堆栈只剩login界面才对
-                      Navigator.pop(context);
-                      Navigator.pop(context);
+                      //堆栈只剩login界面才对
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, "/login", (Route<dynamic> route) => false);
+
                     },
                   ),
                 ],

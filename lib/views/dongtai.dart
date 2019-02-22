@@ -9,7 +9,33 @@ class _DongTai extends State<DongTai> {
   @override
   Widget build(BuildContext context) {
     return new ListView(children: <Widget>[
-      new Center(
+      SizedBox(height: 5,),
+      Container(
+        height: 150,
+        child: Image.network(
+            'https://img02.sogoucdn.com/app/a/100520024/ad4741145c4dfd2c0f7c8afed8b1e029'),
+      ),
+      Divider(),
+      GestureDetector(
+        child: Card(
+          child: Text("这是一条新闻"),
+          elevation: 5,
+        ),
+        onTap: () {
+          print("tap new");
+        },
+      ),
+      GestureDetector(
+        child: MaterialButton(
+          onPressed: () {
+            print("000321321");
+          },
+          child: Text("这是第二条新闻"),
+          color: Colors.grey,
+        ),
+      ),
+      Divider(),
+      Center(
         child: new Text(
           '\nSonnet',
           style: new TextStyle(
@@ -18,7 +44,7 @@ class _DongTai extends State<DongTai> {
           ),
         ),
       ),
-      new Center(
+      Center(
         child: new Text(
           'William Shakespeare\n\n',
           style: new TextStyle(
@@ -27,7 +53,7 @@ class _DongTai extends State<DongTai> {
           ),
         ),
       ),
-      new Center(
+      Center(
         child: new Text(
           '''
 From fairest creatures we desire increase,
@@ -73,7 +99,7 @@ Despite of wrinkles, this thy golden time.
 But if thou live rememb'red not to be,
 Die single, and thine image dies with thee.
              ''',
-          style: new TextStyle(
+          style: TextStyle(
             fontFamily: 'serif',
             fontSize: 14.0,
           ),

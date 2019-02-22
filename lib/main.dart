@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_first_app/router/routers.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
-import 'package:flutter_first_app/views/home.dart';
-import 'package:flutter_first_app/views/register.dart';
-import 'package:flutter_first_app/views/ForgetPassword.dart';
 
 void main() => runApp(MyApp());
 
@@ -129,9 +126,9 @@ class _LoginPageState extends State<LoginPage> {
                               .withAlpha(220)),
                       onPressed: () {
                         //TODO : 第三方登录方法
-                        Scaffold.of(context).showSnackBar(new SnackBar(
-                          content: new Text("${item['title']}登录"),
-                          action: new SnackBarAction(
+                        Scaffold.of(context).showSnackBar(SnackBar(
+                          content: Text("${item['title']}登录"),
+                          action: SnackBarAction(
                             label: "取消",
                             onPressed: () {},
                           ),
