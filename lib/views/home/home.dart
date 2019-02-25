@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_first_app/views/home_dongtai.dart';
-import 'package:flutter_first_app/views/home_fuwu.dart';
-import 'package:flutter_first_app/views/home_drawer_myNote.dart';
-import 'package:flutter_first_app/views/home_drawer_myNote2.dart';
-import 'package:flutter_first_app/views/home_zuzhi.dart';
-import 'package:oktoast/oktoast.dart';
+import 'package:flutter_first_app/views/home/dongtai/home_dongtai.dart';
+import 'package:flutter_first_app/views/home/fuwu/home_fuwu.dart';
+import 'package:flutter_first_app/views/home/drawer/home_drawer_myNote.dart';
+import 'package:flutter_first_app/views/home/drawer/home_drawer_myNote2.dart';
+import 'package:flutter_first_app/views/home/zuzhi/home_zuzhi.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -28,17 +28,15 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         title: Text("OutZone"),
         actions: <Widget>[
-          //导航栏右侧菜单
-          //IconButton(icon: Icon(Icons.info_outline), onPressed: () {showToast('...');}),
           IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                showToast('搜索');
+                Fluttertoast.showToast(msg: '搜索');
               }),
           IconButton(
               icon: Icon(Icons.add),
               onPressed: () {
-                showToast('多功能按钮');
+                Fluttertoast.showToast(msg: '多功能按钮');
               }),
         ],
       ),
@@ -87,7 +85,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
   }
 
   void _onFloatingActionButton() {
-    showToast("悬浮按钮");
+    Fluttertoast.showToast(msg: "悬浮按钮");
   }
 }
 
@@ -111,7 +109,7 @@ class MyDrawer extends StatelessWidget {
               accountName: Text("我来显示名字"),
               accountEmail: Text("我来显示邮箱"),
               onDetailsPressed: () {
-                showToast('这里弹出修改用户信息的页面');
+                Fluttertoast.showToast(msg: "这里弹出修改用户信息的页面");
               },
             ),
             Expanded(
@@ -145,7 +143,7 @@ class MyDrawer extends StatelessWidget {
                     leading: const Icon(Icons.settings),
                     title: const Text('设置'),
                     onTap: () {
-                      showToast('hello settings');
+                      Fluttertoast.showToast(msg: "settings");
                     },
                   ),
                   ListTile(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_app/router/routers.dart';
-import 'package:oktoast/oktoast.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
 
 void main() => runApp(MyApp());
@@ -9,21 +9,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return OKToast(
-      position: ToastPosition.center,
-      textStyle: TextStyle(fontSize: 30.0, color: Colors.yellow),
-      backgroundColor: Colors.grey,
-      radius: 10.0,
-      child: MaterialApp(
-        initialRoute: '/login',
-        routes: routes,
+    return MaterialApp(
+      initialRoute: '/login',
+      routes: routes,
 
-        theme: ThemeData(
-          // primarySwatch: Colors.blue,
-          primaryColor: Colors.blue,
-        ),
-        //home: LoginPage(),
+      theme: ThemeData(
+        // primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
       ),
+      //home: LoginPage(),
     );
   }
 }
@@ -257,7 +251,7 @@ class _LoginPageState extends State<LoginPage> {
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        'OutZone',
+        "OutZone",
         style: TextStyle(fontSize: 42.0),
       ),
     );
