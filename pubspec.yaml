@@ -16,15 +16,15 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
-  english_words:
-  oktoast:
-  scoped_model:
-  charts_flutter:
-  groovin_material_icons:
 
+  cupertino_icons: ^0.1.2  # iOS风格图标
+  english_words:
+  oktoast:  # 显示toast
+  scoped_model:
+  charts_flutter:  # 图表库
+  groovin_material_icons:  # 商业相关的图标库
+  http:  # 简单的网络库
+  dio:  # 比http功能丰富的网络库
 
 
 
