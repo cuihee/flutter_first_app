@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first_app/independence/charts/simple_bar_charts.dart';
 import 'package:flutter_first_app/views/showCharts.dart';
 
 class MyFuwuCard extends StatelessWidget {
@@ -38,7 +39,11 @@ class MyFuwuCard extends StatelessWidget {
         ),
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => ShowCharts()));
+            context,
+            MaterialPageRoute(
+              builder: (context) => SimpleBarChart.withSampleData(),
+            ),
+          );
         },
       ),
     );

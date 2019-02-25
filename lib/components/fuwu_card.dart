@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first_app/independence/charts/simple_bar_charts.dart';
 import 'package:flutter_first_app/views/showCharts.dart';
 
 class FuwuCard extends StatelessWidget {
@@ -41,8 +42,12 @@ class FuwuCard extends StatelessWidget {
                 FlatButton(
                   child: Text('查看'),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ShowCharts()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SimpleBarChart.withSampleData(),
+                      ),
+                    );
                   },
                 ),
                 FlatButton(
