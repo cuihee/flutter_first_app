@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_app/independence/charts/simple_bar_charts.dart';
-import 'package:flutter_first_app/views/showCharts.dart';
+import 'package:flutter_first_app/components/showCharts.dart';
 
 class MyFuwuCard extends StatelessWidget {
   String title = '未命名的标题', subtitle = '未命名副标题';
@@ -41,7 +41,7 @@ class MyFuwuCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => SimpleBarChart.withSampleData(),
+              builder: (context) => ShowCharts(),
             ),
           );
         },

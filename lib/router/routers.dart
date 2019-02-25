@@ -1,8 +1,8 @@
 import 'package:flutter_first_app/main.dart';
 import 'package:flutter_first_app/model/simpleNavName.dart';
-import 'package:flutter_first_app/views/ForgetPassword.dart';
+import 'package:flutter_first_app/views/login_forget_password.dart';
 import 'package:flutter_first_app/views/home.dart';
-import 'package:flutter_first_app/views/register.dart';
+import 'package:flutter_first_app/views/login_register.dart';
 
 var routes = {
   "/login": (context) => LoginPage(),

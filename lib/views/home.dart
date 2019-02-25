@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_first_app/views/dongtai.dart';
-import 'package:flutter_first_app/views/fuwu.dart';
-import 'package:flutter_first_app/views/myNote.dart';
-import 'package:flutter_first_app/views/myNote2.dart';
-import 'package:flutter_first_app/views/zuzhi.dart';
+import 'package:flutter_first_app/views/home_dongtai.dart';
+import 'package:flutter_first_app/views/home_fuwu.dart';
+import 'package:flutter_first_app/views/home_drawer_myNote.dart';
+import 'package:flutter_first_app/views/home_drawer_myNote2.dart';
+import 'package:flutter_first_app/views/home_zuzhi.dart';
 import 'package:oktoast/oktoast.dart';
 
 class Home extends StatefulWidget {
@@ -26,18 +26,11 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //导航栏
-        // leading: new IconButton(
-        //   icon: new Icon(Icons.menu),
-        //   tooltip: '左上角的三横',
-        //   onPressed: (){new MyDrawer();},
-        //   ),
-
         title: Text("OutZone"),
         actions: <Widget>[
           //导航栏右侧菜单
           //IconButton(icon: Icon(Icons.info_outline), onPressed: () {showToast('...');}),
-          new IconButton(
+          IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
                 showToast('搜索');
